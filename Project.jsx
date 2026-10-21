@@ -2,14 +2,14 @@ import { useState } from 'react'
 
 const projects = {
   tab1: [
-    { title: "Business Startup", desc: "Design & Development", img:'project2.png'},
-    { title: "Business Startup", desc: "Design & Development", img:'project3.png'},
-    { title: "Boost Startup", desc: "Development", img: "project4.png" },
+    { title: "Business Startup", desc: "Design & Development", public:'project2.png'},
+    { title: "Business Startup", desc: "Design & Development", public:'project3.png'},
+    { title: "Boost Startup", desc: "Development", public: "project4.png" },
   ],
   tab3: [
-    { title: "Project 7", desc: "Description", img: "project2.png" },
-    { title: "Project 8", desc: "Description", img: "project3.png" },
-    { title: "Project 9", desc: "Description", img: "project4.png" },
+    { title: "Project 7", desc: "Description", public: "project2.png" },
+    { title: "Project 8", desc: "Description", public: "project3.png" },
+    { title: "Project 9", desc: "Description", public: "project4.png" },
   ],
 }
 
