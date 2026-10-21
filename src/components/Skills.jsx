@@ -14,10 +14,10 @@ const skills = [
 function Skills() {
   return (
     <section id='skills'>
-<div className="px-10 py-20 text-center w-[80%] m-auto rounded-3xl" 
+<div className="px-4 md:px-10 py-20 text-center w-[80%] m-auto rounded-3xl" 
   style={{background: 'linear-gradient(135deg, #1a0533, #0d1b4b, #1a0533, #4a0080, #0d1b4b)'}}
   id="skills">
-          <h2 className="mb-4 text-4xl font-bold text-white">Skills</h2>
+          <h2 className="mb-4 text-3xl font-bold text-white md:text-6xl">Skills</h2>
       <p className="mb-10 text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
       <Swiper
@@ -28,7 +28,7 @@ function Skills() {
       >
         {skills.map((skill) => (
           <SwiperSlide key={skill.name}>
-            <div className="flex flex-col items-center gap-4 p-6">
+            <div className="flex-col items-center gap-4 p-6 md:flex-row">
               
               {/* الدايرة */}
               <div className="relative w-32 h-32">
@@ -46,7 +46,7 @@ function Skills() {
                     </linearGradient>
                   </defs>
                 </svg>
-                <span className="absolute inset-0 flex items-center justify-center text-xl font-bold text-white">
+                <span className="absolute inset-0 flex-col items-center justify-center text-xl font-bold text-white md:flex-row">
                   {skill.level}%
                 </span>
               </div>

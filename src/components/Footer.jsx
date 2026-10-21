@@ -1,9 +1,9 @@
 function Footer() {
   return (
-    <div className="px-10 pb-10 bg-black">
+    <div className="px-4 bg-black md:px-10pb-10">
 
       {/* Newsletter */}
-      <div className="flex items-center justify-between px-16 py-10 mb-10 bg-white rounded-3xl">
+      <div className="flex-col items-center justify-between px-4 py-10 mb-10 bg-white md:flex-row md:px-16 rounded-3xl">
         <h2 className="w-1/2 text-2xl font-bold text-gray-900">
           Subscribe to our Newsletter <br />
           & Never miss latest updates
@@ -19,11 +19,11 @@ function Footer() {
 
       {/* Footer Bottom */}<span className="text-white">Badwy</span>
   <span className="text-purple-500">.dev</span>      
-      <div className="flex items-center justify-between pt-6 border-t border-gray-800">
+      <div className="flex-col items-center justify-between pt-6 border-t border-gray-800 md:flex-row">
    <p className="text-sm text-gray-400">
           Copyright 2025. All Rights Reserved By Ahmed Farg Badwy
         </p>
-        <div className="flex gap-4">
+        <div className="flex-col gap-4 md:flex-row">
           {['in', 'f', 'ig'].map((icon) => (
             <div key={icon}
               className="flex items-center justify-center w-10 h-10 text-white transition duration-300 border border-gray-600 rounded-full cursor-pointer hover:border-purple-500">

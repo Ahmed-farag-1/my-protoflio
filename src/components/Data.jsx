@@ -20,10 +20,10 @@ useEffect(()=>{
   return (
      
 <section id='Home'> 
-    <div className="flex justify-between min-h-screen px-10 py-20">
+    <div className="flex-col justify-between min-h-screen px-4 py-20 md:flex-row md:px-10">
       
       
-      <div className="flex flex-col justify-center w-1/2 gap-5">
+      <div className="flex-col justify-center w-full gap-5 md:flex-row md:w-1/2">
         
         <span className="px-4 py-2 text-white bg-blue-800 rounded w-fit">
           Welcome to my Portfolio
@@ -41,14 +41,14 @@ useEffect(()=>{
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
 
-        <button className="flex items-center gap-2 font-bold text-white w-fit">
+        <button className="flex-col gap-2 font-bold text-white md:flex-rowitems-center w-fit">
           Let's Connect →
         </button>
 
       </div>
 
       
-      <div className="flex items-end justify-center w-1/2">
+      <div className="flex-col items-end justify-center w-full max-w-xs md:max-w-md md:flex-row md:w-1/2 ">
 
         <img src={MyPhoto} alt="profile"  className="w-96 float-img " />
       </div>
