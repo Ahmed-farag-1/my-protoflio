@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import MyPhoto from '../components/img/download.png'
 
 function Data() {
@@ -39,9 +40,9 @@ function Data() {
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </p>
 
-          <a href="#contact" className="font-bold text-white w-fit">
-  Let's Connect →
-</a>
+          <Link to="/contact" className="font-bold text-white w-fit">
+            Let's Connect →
+          </Link>
         </div>
 
         {/* الصورة */}

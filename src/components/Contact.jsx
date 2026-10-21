@@ -1,8 +1,10 @@
-const PHONE = "201070399316" // ← غيّره لرقمك
+import { Link } from 'react-router-dom'
+
+const PHONE = "201070399316"
 
 function Contact() {
   return (
-    <section id="contact" className="px-4 py-16 md:px-10 md:py-24">
+    <section id="contact" className="flex items-center justify-center min-h-screen px-4 bg-black">
       <div
         className="w-full max-w-4xl p-8 mx-auto text-center md:p-14 rounded-3xl"
         style={{ background: 'linear-gradient(135deg, #7c3aed, #9333ea, #6d28d9)' }}
@@ -31,6 +33,10 @@ function Contact() {
         </div>
 
         <p className="mt-6 text-sm text-purple-100" dir="ltr">+{PHONE}</p>
+
+        <Link to="/" className="inline-block mt-6 text-sm text-purple-100 underline">
+          ← Back to Home
+        </Link>
       </div>
     </section>
   )

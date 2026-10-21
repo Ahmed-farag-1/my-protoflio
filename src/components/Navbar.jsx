@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   const [open, setOpen] = useState(false)
@@ -20,14 +21,13 @@ function Navbar() {
           <li><a href="#Projects">Projects</a></li>
         </ul>
 
-        {/* الزرار (كمبيوتر) */}
-       {/* كمبيوتر */}
-<a href="#contact" className="hidden px-6 py-2 text-white border border-white rounded md:block btn1">
-  Let's Connect
-</a>
-
-{/* موبايل (جوه القايمة) */}
-{/* كمبيوتر */}
+        {/* زرار التواصل (كمبيوتر) */}
+        <Link
+          to="/contact"
+          className="hidden px-6 py-2 text-white border border-white rounded md:block btn1"
+        >
+          Let's Connect
+        </Link>
 
         {/* زرار الهمبرجر (موبايل) */}
         <button
@@ -45,8 +45,13 @@ function Navbar() {
           <a href="#Home" onClick={() => setOpen(false)}>Home</a>
           <a href="#skills" onClick={() => setOpen(false)}>Skills</a>
           <a href="#Projects" onClick={() => setOpen(false)}>Projects</a>
-        
-          
+          <Link
+            to="/contact"
+            onClick={() => setOpen(false)}
+            className="px-6 py-2 text-white border border-white rounded w-fit btn1"
+          >
+            Let's Connect
+          </Link>
         </div>
       )}
     </nav>
