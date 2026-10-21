@@ -38,7 +38,8 @@ function Project() {
 
   return (
     <section id="Projects">
-     <div className="px-4 py-12 md:px-10 md:py-20" id="projects">
+      <div className="px-4 py-12 md:px-10 md:py-20" id="projects">
+
         {/* أزرار التابات */}
         <div className="flex justify-center mb-10">
           <div className="flex p-1 bg-gray-900 rounded-full">
@@ -46,7 +47,8 @@ function Project() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-className={`px-4 py-2 text-sm md:px-10 md:py-3 md:text-base rounded-full font-bold ...                  activeTab === tab
+                className={`px-4 py-2 text-sm md:px-10 md:py-3 md:text-base rounded-full font-bold transition duration-300 ${
+                  activeTab === tab
                     ? 'bg-gradient-to-r from-purple-600 to-pink-500 text-white'
                     : 'text-gray-400'
                 }`}
@@ -59,7 +61,8 @@ className={`px-4 py-2 text-sm md:px-10 md:py-3 md:text-base rounded-full font-bo
 
         {/* Tab 1 */}
         {activeTab === 'tab1' && (
-<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">            {projects.tab1.map((project, index) => (
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {projects.tab1.map((project, index) => (
               <ProjectCard key={`tab1-${index}`} project={project} />
             ))}
           </div>
@@ -67,25 +70,28 @@ className={`px-4 py-2 text-sm md:px-10 md:py-3 md:text-base rounded-full font-bo
 
         {/* Tab 2 */}
         {activeTab === 'tab2' && (
-      
-<div className="flex flex-col items-center gap-6 p-6 md:flex-row md:gap-10 md:p-10 rounded-3xl" >
+          <div
+            className="flex flex-col items-center gap-6 p-6 md:flex-row md:gap-10 md:p-10 rounded-3xl"
             style={{ background: 'linear-gradient(135deg, #7c3aed, #9333ea, #6d28d9)' }}
-          
-<div className="w-full md:w-1/2">
+          >
+            <div className="w-full md:w-1/2">
               <img src={`${BASE}img3.png`} alt="contact" className="w-full" />
             </div>
-{/* ********************************************************************* */}
-<div className="flex flex-col gap-4 sm:flex-row">
 
-<div className="flex flex-col w-full gap-4 md:w-1/2">                <input type="text" placeholder="First Name" className={`w-1/2 ${inputClass}`} />
-                <input type="text" placeholder="Last Name" className={`w-1/2 ${inputClass}`} />
+            <div className="flex flex-col w-full gap-4 md:w-1/2">
+              <h2 className="text-3xl font-bold text-white md:text-4xl">Get In Touch</h2>
+
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <input type="text" placeholder="First Name" className={`w-full sm:w-1/2 ${inputClass}`} />
+                <input type="text" placeholder="Last Name" className={`w-full sm:w-1/2 ${inputClass}`} />
               </div>
 
-<div className="flex flex-col w-full gap-4 md:w-1/2">                <input type="email" placeholder="Email Address" className={`w-1/2 ${inputClass}`} />
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <input type="email" placeholder="Email Address" className={`w-full sm:w-1/2 ${inputClass}`} />
                 <input type="text" placeholder="Phone Number" className={`w-full sm:w-1/2 ${inputClass}`} />
               </div>
 
-              <textarea placeholder="Message" rows={5}  className={`w-full sm:w-1/2 ${inputClass}`} />
+              <textarea placeholder="Message" rows={5} className={`w-full resize-none ${inputClass}`} />
 
               <button className="py-3 font-bold text-purple-700 transition duration-300 bg-white rounded-xl hover:bg-gray-100">
                 Send
@@ -96,7 +102,8 @@ className={`px-4 py-2 text-sm md:px-10 md:py-3 md:text-base rounded-full font-bo
 
         {/* Tab 3 */}
         {activeTab === 'tab3' && (
-<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">            {projects.tab3.map((project, index) => (
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {projects.tab3.map((project, index) => (
               <ProjectCard key={`tab3-${index}`} project={project} />
             ))}
           </div>

@@ -1,62 +1,61 @@
 import { useEffect, useState } from 'react'
 import MyPhoto from '../components/img/download.png'
+
 function Data() {
+  const [text, setText] = useState("")
+  const fullText = "front End Developer"
 
-  
-const  [text,setText]=useState("")
-const fullText="front End Developer"
+  useEffect(() => {
+    let i = 0
+    const interval = setInterval(() => {
+      setText(fullText.slice(0, i))
+      i++
+      if (i > fullText.length) i = 0
+    }, 500)
 
-useEffect(()=>{
-  let i =0
-  const interval =setInterval(() => {
-    setText(fullText.slice(0,i))
-    i++
-    if (i > fullText.length) i = 0
-  }, 500);
-  
-  return ()=> clearInterval(interval)
-},[])
-  
+    return () => clearInterval(interval)
+  }, [])
+
   return (
-     
-<section id='Home'> 
-    <div className="flex-col justify-between min-h-screen px-4 py-20 md:flex-row md:px-10">
-      
-      
-      <div className="flex-col justify-center w-full gap-5 md:flex-row md:w-1/2">
-        
-        <span className="px-4 py-2 text-white bg-blue-800 rounded w-fit">
-          Welcome to my Portfolio
-        </span>
+    <section id="Home">
+      <div className="flex flex-col items-center justify-between min-h-screen gap-10 px-4 py-20 md:flex-row md:px-10">
 
-      
-<h1 className="text-4xl font-bold leading-tight text-transparent bg-gradient-to-r from-white via-blue-800 via-blue-300 to-pink-300 bg-clip-text">
-  Hi! I'm Ahmed Farg Badwy <br />
- 
-</h1>
-  <span className="text-4xl font-bold leading-tight text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">
-            {text}</span>
+        {/* النص */}
+        <div className="flex flex-col justify-center w-full gap-5 md:w-1/2">
 
-        <p className="text-lg text-gray-400">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </p>
+          <span className="px-4 py-2 text-white bg-blue-800 rounded w-fit">
+            Welcome to my Portfolio
+          </span>
 
-        <button className="flex-col gap-2 font-bold text-white md:flex-rowitems-center w-fit">
-          Let's Connect →
-        </button>
+          <h1 className="text-3xl font-bold leading-tight text-transparent md:text-5xl bg-gradient-to-r from-white via-blue-300 to-pink-300 bg-clip-text">
+            Hi! I'm Ahmed Farg Badwy
+          </h1>
+
+          <span className="text-3xl font-bold leading-tight text-transparent md:text-5xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">
+            {text}
+          </span>
+
+          <p className="text-base text-gray-400 md:text-lg">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+
+          <a href="#contact" className="font-bold text-white w-fit">
+  Let's Connect →
+</a>
+        </div>
+
+        {/* الصورة */}
+        <div className="flex justify-center w-full md:w-1/2 md:justify-end">
+          <img
+            src={MyPhoto}
+            alt="profile"
+            className="w-64 md:w-96 float-img"
+          />
+        </div>
 
       </div>
-
-      
-      <div className="flex-col items-end justify-center w-full max-w-xs md:max-w-md md:flex-row md:w-1/2 ">
-
-        <img src={MyPhoto} alt="profile"  className="w-96 float-img " />
-      </div>
-
-    </div>
     </section>
   )
 }
-
 
 export default Data
